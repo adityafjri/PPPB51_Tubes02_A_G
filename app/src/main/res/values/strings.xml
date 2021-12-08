@@ -24,5 +24,10 @@
     <string name="reach_me">Reach me</string>
     <string name="erase_all_data">Erase all data</string>
     <string name="noPermissionMarshmallow">lala</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="tempat_duduk">Tempat Duduk</string>
+    <string name="besar">Besar</string>
+
+    <string name="travelaku">Travelaku</string>
 
 </resources>
