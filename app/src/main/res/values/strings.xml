@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Tubes</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam leo dui, nec egestas velit mattis ut. Nunc mattis malesuada ex ornare commodo. Nam laoreet iaculis ipsum, id cursus nulla euismod vel. Morbi non enim ut massa bibendum ornare. Cras ornare arcu ex, nec porttitor justo scelerisque nec. Duis in placerat ipsum, id scelerisque tellus. Quisque varius auctor ex.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pesan_sekarang">Pesan Sekarang</string>
+    <string name="subtitle">Lorem Ipsum</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
     <string name="choose_image">Choose Image</string>
     <string name="pilih_gambar">Pilih gambar</string>
     <string name="tambah_judul">Tambah Judul</string>

@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 
 import com.example.tubes.adapter.FilmListAdapter;
 import com.example.tubes.R;
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
     private ArrayAdapter<CharSequence> typeListAdapter;
     private AutoCompleteTextView dropdownType;
     private AutoCompleteTextView sortType;
+    private Button btnPesanSekarang;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,8 +50,11 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        btnPesanSekarang = view.findViewById(R.id.btn_mulai);
 
         homeListAdapter = new FilmListAdapter(getActivity());
+
+        /**
         rvCard = view.findViewById(R.id.rv_card);
         fabAdd = view.findViewById(R.id.fab_add);
         dropdownType = view.findViewById(R.id.dropdown_type_home);
@@ -58,14 +63,14 @@ public class HomeFragment extends Fragment {
         rvCard.setAdapter(this.homeListAdapter);
         rvCard.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, true));
         rvCard.setHasFixedSize(true);
-
-        fabAdd.setOnClickListener(v -> {
+        */
+        btnPesanSekarang.setOnClickListener(v -> {
             FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, new AddEditFragment())
                     .addToBackStack(null)
                     .commit();
         });
-
+/**
         dropdownType.setOnItemClickListener((parent, view1, position, id) -> {
             if (position == 0) {
                 homeViewModel.refreshFilm(getActivity(), "All");
@@ -96,7 +101,7 @@ public class HomeFragment extends Fragment {
         sortType.setAdapter(new ArrayAdapter(getActivity(), R.layout.dropdown_item_list, getResources().getStringArray(R.array.sort_type)));
         dropdownType.setAdapter(typeListAdapter);
     }
-
+*/
 //    @Override
 //    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 //        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -112,3 +117,4 @@ public class HomeFragment extends Fragment {
 //                }
 //        }
     }
+}

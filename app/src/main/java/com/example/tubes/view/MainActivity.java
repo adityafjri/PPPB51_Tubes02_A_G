@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.example.tubes.R;
 import com.example.tubes.view.history.HistoryFragment;
 import com.example.tubes.view.home.HomeFragment;
+import com.example.tubes.view.login.LoginFragment;
 import com.example.tubes.view.setting.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -28,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
         PackageManager.PERMISSION_GRANTED);
 
-        bottom_nav = findViewById(R.id.bottom_nav);
-        bottom_nav.setOnNavigationItemSelectedListener(this);
+//        bottom_nav = findViewById(R.id.bottom_nav);
+//        bottom_nav.setOnNavigationItemSelectedListener(this);
 
-        loadFragment(new HomeFragment());
+        loadFragment(new LoginFragment());
     }
 
     @Override
