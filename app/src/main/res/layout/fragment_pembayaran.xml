@@ -12,8 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_pesan"
-        android:text="Pesan"
+        android:id="@+id/tv_pembayaran"
+        android:text="Pembayaran"
         android:textSize="24dp"
         android:layout_centerHorizontal="true"
         />
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/btn_cari"
-        android:layout_below="@id/tv_pesan"
+        android:layout_below="@id/tv_pembayaran"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="20dp"
         android:background="@color/pale_green"
@@ -37,22 +37,14 @@
             android:text="Dari"
             android:textSize="18dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/CustomTextInputLayoutDropdownStyle"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:id="@+id/tv_asal_pilihan"
             android:background="@color/white"
-            android:textColorHint="@color/black"
-            app:endIconTint="@color/earth_green">
-
-            <AutoCompleteTextView
-                android:id="@+id/dropdown_asal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:text="Kota"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="Kota Bandung"
+            android:textSize="18dp"
+            />
 
         <TextView
             android:id="@+id/tv_ke"
@@ -63,22 +55,14 @@
             android:text="Ke"
             android:textSize="18dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/CustomTextInputLayoutDropdownStyle"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:id="@+id/tv_tujuan_pilihan"
             android:background="@color/white"
-            android:textColorHint="@color/black"
-            app:endIconTint="@color/earth_green">
-
-            <AutoCompleteTextView
-                android:id="@+id/dropdown_tujuan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:text="Kota"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="Kota Jakarta"
+            android:textSize="18dp"
+            />
 
         <TextView
             android:id="@+id/tv_tanggal"
@@ -90,11 +74,11 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tanggal"
+            android:id="@+id/tv_tanggal_pilihan"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
-            android:hint="nanti ini pilih tanggal bukan tv"
+            android:hint="20 Januari 2022"
             android:textSize="18dp" />
 
         <TextView
@@ -103,52 +87,33 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="4dp"
-            android:text="Jam Berangkat"
+            android:text="Seat"
             android:textSize="18dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/CustomTextInputLayoutDropdownStyle"
+        <TextView
+            android:id="@+id/tv_seat_piihan"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
-            android:textColorHint="@color/black"
-            app:endIconTint="@color/earth_green">
-
-            <AutoCompleteTextView
-                android:id="@+id/dropdown_jam"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:text="Pilih Jam"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="1, 3"
+            android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_mobil"
+            android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="4dp"
-            android:text="Mobil"
+            android:text="Total"
             android:textSize="18dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/CustomTextInputLayoutDropdownStyle"
+        <TextView
+            android:id="@+id/tv_total_harga"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/white"
-            android:textColorHint="@color/black"
-            app:endIconTint="@color/earth_green">
-
-            <AutoCompleteTextView
-                android:id="@+id/dropdown_mobil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:text="Pilih Ukuran Mobil"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
+            android:hint="Rp xxx.xxx"
+            android:textSize="18dp" />
     </LinearLayout>
 
     <Button
@@ -158,7 +123,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/earth_green"
-        android:text="Cari"
+        android:text="Pesan"
         android:textColor="@color/white" />
 
 </RelativeLayout>
