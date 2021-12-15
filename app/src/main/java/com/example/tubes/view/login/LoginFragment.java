@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,11 +40,22 @@ public class LoginFragment extends Fragment {
         btnLogin = view.findViewById(R.id.btn_login);
 
         btnLogin.setOnClickListener(v -> {
-            FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, new HomeFragment())
-                    .addToBackStack(null)
-                    .commit();
+            String username = etUsername.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
+            if (!username.isEmpty() || !password.isEmpty()) {
+                loginViewModel.login(username, password);
+            } else {
+                Toast.makeText(getActivity(), "Please fill form to login", Toast.LENGTH_SHORT).show();
+            }
         });
+        loginViewModel.isLogin.observe(requireActivity(), isLogin -> {
+            if (isLogin) {
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new HomeFragment())
+                        .addToBackStack(null)
+                        .commit();
 
+            }
+        });
     }
 }
